@@ -1,2 +1,2 @@
-import Vue from 'vue'
-Vue.use(require('vue-moment'))
+import Vue from "vue"
+Vue.use(require("vue-moment"))

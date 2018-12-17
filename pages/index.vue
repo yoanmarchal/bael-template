@@ -1,15 +1,12 @@
 <template>
-
-    <BaelGrid :allitems="allBlogPosts"></BaelGrid>
+  <BaelGrid :allitems="allBlogPosts"></BaelGrid>
 </template>
 
 <script>
 import BaelGrid from "~/components/BaelGrid";
 export default {
-    watchQuery: ['page'],
-
-   transition (to, from) {
-     
+  watchQuery: ['page'],
+  transition (to, from) {
     if (!from) return 'fade'
     return +to.query.page > +from.query.page ? 'slide-right' : 'slide-left'
   },
@@ -19,7 +16,6 @@ export default {
     return {};
   },
   methods: {},
-
   computed: {
     allBlogPosts() {
       return this.$store.state.blogPosts;
