@@ -4,16 +4,8 @@ importScripts('/_nuxt/workbox.4c4f5ca6.js')
 
 workbox.precaching.precacheAndRoute([
   {
-    "url": "/_nuxt/14e5c2cc2c5c909c0be5.js",
-    "revision": "37dd10be08fa906d9c3e0347668c5fb0"
-  },
-  {
     "url": "/_nuxt/1e5129f552d04ba087e7.js",
     "revision": "73385ae36898ab8d89fd08ea86bf6c4e"
-  },
-  {
-    "url": "/_nuxt/5a47bff7d28d5d434d5d.css",
-    "revision": "bce9c45dda3c9e34fb2f79f5dc5507c2"
   },
   {
     "url": "/_nuxt/664e6282432c0a953d49.js",
@@ -36,6 +28,10 @@ workbox.precaching.precacheAndRoute([
     "revision": "39af36a0bf464e2d5f8ffb35a2f8d594"
   },
   {
+    "url": "/_nuxt/8be0f8bef3aa418d3df4.js",
+    "revision": "9e7b466ee37d19a20cf9866925723a6b"
+  },
+  {
     "url": "/_nuxt/8cbf8e30dae1d79c984f.js",
     "revision": "96d3cc7e35a8d16aee118a1b71c19d68"
   },
@@ -50,6 +46,10 @@ workbox.precaching.precacheAndRoute([
   {
     "url": "/_nuxt/ba1de0d0e4f21fab99e2.css",
     "revision": "d4e1ffd2288b8f85111e3985472a1409"
+  },
+  {
+    "url": "/_nuxt/f88ab3274df6daa2e01c.css",
+    "revision": "b49ba1e52a387f72f94c51aa589e5f4a"
   }
 ], {
   "cacheId": "bael-cms-template",
