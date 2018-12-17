@@ -10,7 +10,6 @@
           </div>
         </div>
       </div>
-
     </div>
   </main>
 </template>
@@ -23,11 +22,10 @@ import MdWrapper from "~/components/MdWrapper";
 export default {
   async asyncData({ params, app, payload, route, store }) {
     let post = await import("~/content/page/posts/" + params.slug + ".json");
-    console.log(post);
     await store.commit("SET_TITLE", post.title);
     return post;
   },
-     transition (to, from) {
+  transition (to, from) {
     if (!from) { return 'slide-left' } else {return 'slide-right'}
   },
   head() {
@@ -41,8 +39,6 @@ export default {
   methods: {
     onResize(event) {
       this.navHeight();
-      console.log(this.$store.state.navheight);
-      console.log("slug resize");
     },
     navHeight() {
       var height = document.getElementById("navbar").clientHeight;
@@ -53,8 +49,6 @@ export default {
     if (process.browser) {
       this.$nextTick(() => {
         this.navHeight();
-        console.log(this.$store.state.navheight);
-        console.log("slug updated");
       });
     }
   },
@@ -63,8 +57,6 @@ export default {
       this.$nextTick(() => {
         this.navHeight();
         window.addEventListener("resize", this.onResize);
-        console.log(this.$store.state.navheight);
-        console.log("slug mounted");
       });
     }
   },

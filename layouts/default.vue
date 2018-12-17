@@ -17,12 +17,10 @@ export default {
       email: { email: "" }
     };
   },
-
   methods: {
     navHeight() {
       if (process.browser) {
         var height = document.getElementById("navbar").clientHeight;
-
         this.$store.commit("SET_NAVHEIGHT", height - 1);
       }
     }
@@ -47,7 +45,7 @@ export default {
   },
   computed: {
     paginate() {
-return this.$store.state.pagination
+      return this.$store.state.pagination
     },
     blogposts() {
       return this.$store.state.blogPosts;

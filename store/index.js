@@ -1,5 +1,5 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import Vue from "vue"
+import Vuex from "vuex"
 Vue.use(Vuex)
 
 const createStore = () =>
@@ -10,110 +10,102 @@ const createStore = () =>
       blogPosts: [],
       allPages: [],
       navheight: 60,
-      blogTitle: '',
+      blogTitle: "",
       siteInfo: [],
       connect: [],
       allTags: [],
       gridItems: [],
-      gridNumPosts: '11',
-      gridNumCats: '11',
-      gridOffset: '0',
-      theThumbnail: '',
-      theCategory: '',
-      theCrumb: '',
+      gridNumPosts: "11",
+      gridNumCats: "11",
+      gridOffset: "0",
+      theThumbnail: "",
+      theCategory: "",
+      theCrumb: "",
       allCats: [],
       results: [],
       resultsnum: [],
-      pagination: false,
-      menuIsActive: false,
-      menuInitial: true,
+      pagination: false
     },
     actions: {
       async nuxtServerInit({ dispatch }) {
-        await dispatch('getSiteInfo')
-        await dispatch('getBlogPosts')
-        await dispatch('getPages')
-        await dispatch('getCats')
+        await dispatch("getSiteInfo")
+        await dispatch("getBlogPosts")
+        await dispatch("getPages")
+        await dispatch("getCats")
       },
-      async getBlogPosts({ state, commit }) {
-        const context = await require.context('~/content/blog/posts/', false, /\.json$/);
-
+      async getBlogPosts({ commit }) {
+        const context = await require.context(
+          "~/content/blog/posts/",
+          false,
+          /\.json$/
+        )
         const searchposts = await context.keys().map(key => ({
           ...context(key),
-          _path: `/blog/${key.replace('.json', '').replace('./', '')}`
-        }));
-
-
-
-        commit('SET_POSTS', searchposts.reverse())
-
+          _path: `/blog/${key.replace(".json", "").replace("./", "")}`
+        }))
+        commit("SET_POSTS", searchposts.reverse())
       },
-      async getPages({ state, commit }) {
-
-
-        const context = await require.context('~/content/page/posts/', false, /\.json$/);
-
+      async getPages({ commit }) {
+        const context = await require.context(
+          "~/content/page/posts/",
+          false,
+          /\.json$/
+        )
         const pages = await context.keys().map(key => ({
           ...context(key),
-          _path: `/page/${key.replace('.json', '').replace('./', '')}`
-        }));
-
-        commit('SET_PAGES', pages)
-
+          _path: `/page/${key.replace(".json", "").replace("./", "")}`
+        }))
+        commit("SET_PAGES", pages)
       },
-      setGridNumPosts({ state, commit }) {
+      setGridNumPosts({ state }) {
         if (state.blogPosts > 13) {
-          this.$store.commit("SET_GRIDNUMPOSTS", 12);
+          this.$store.commit("SET_GRIDNUMPOSTS", 12)
         }
       },
-      setGridNumCats({ state, commit }) {
+      setGridNumCats({ state }) {
         if (state.allCats > 13) {
-          this.$store.commit("SET_GRIDNUMCATS", 12);
+          this.$store.commit("SET_GRIDNUMCATS", 12)
         }
       },
-
-      async getCats({ state, commit }) {
-
-
-        const context = await require.context('~/content/categories/posts/', false, /\.json$/);
-
+      async getCats({ commit }) {
+        const context = await require.context(
+          "~/content/categories/posts/",
+          false,
+          /\.json$/
+        )
         const pages = await context.keys().map(key => ({
           ...context(key),
-          _path: `/category/${key.replace('.json', '').replace('./', '')}`
-        }));
-
-        commit('SET_CATS', pages)
-
+          _path: `/category/${key.replace(".json", "").replace("./", "")}`
+        }))
+        commit("SET_CATS", pages)
       },
-      async getTags({ state, commit }) {
-
-
-        const context = await require.context('~/content/tags/posts/', false, /\.json$/);
-
+      async getTags({ commit }) {
+        const context = await require.context(
+          "~/content/tags/posts/",
+          false,
+          /\.json$/
+        )
         const pages = await context.keys().map(key => ({
           ...context(key),
-          _path: `/tagged/${key.replace('.json', '').replace('./', '')}`
-        }));
-
-        commit('SET_TAGS', pages)
-
+          _path: `/tagged/${key.replace(".json", "").replace("./", "")}`
+        }))
+        commit("SET_TAGS", pages)
       },
-      getSiteInfo({ state, commit }) {
-        const info = require('~/content/setup/info.json');
-        const connect = require('~/content/setup/connect.json');
-        const context = require.context('~/content/blog/posts/', false, /\.json$/);
-
+      getSiteInfo({ commit }) {
+        const info = require("~/content/setup/info.json")
+        const connect = require("~/content/setup/connect.json")
+        const context = require.context(
+          "~/content/blog/posts/",
+          false,
+          /\.json$/
+        )
         const searchposts = context.keys().map(key => ({
           ...context(key),
-          _path: `/blog/${key.replace('.json', '').replace('./', '')}`
-        }));
-
-
-
-        commit('SET_POSTS', searchposts)
-        commit('SET_INFO', info)
-        commit('SET_CONNECT', connect)
-
+          _path: `/blog/${key.replace(".json", "").replace("./", "")}`
+        }))
+        commit("SET_POSTS", searchposts)
+        commit("SET_INFO", info)
+        commit("SET_CONNECT", connect)
       }
     },
     mutations: {
@@ -180,8 +172,7 @@ const createStore = () =>
 
       toggleMenuState(state) {
         state.menuIsActive = !state.menuIsActive
-      },
-
+      }
     }
   })
 

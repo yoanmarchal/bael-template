@@ -1,7 +1,6 @@
 <template>
   <footer class="fill-gray-lighter xs-text-6 md-text-5">
     <div class="r no-gap">
-
       <div v-if="pagination" class="c-12 xs-text-left xs-p2 xs-border-right">
         <div class="item xs-text-center">
           <div  class="xs-flex xs-flex-justify-space-between xs-flex-align-center">
@@ -13,9 +12,7 @@
               <span class="text-gray-lightest"> Page {{this.queryParam}} / {{this.totalpages}} - {{this.$store.state.resultsnum}} Results &nbsp; </span>
             </div>
           </div>
-
         </div>
-
       </div>
       <div class="xs-text-left xs-p2 xs-border-right" :class="signupAboutSize">
         <div class="item">
@@ -114,7 +111,6 @@ export default {
         return Number(this.$route.query.page);
       }
     },
-
     connectData() {
       return this.$store.state.connect.connectlinks;
     },
