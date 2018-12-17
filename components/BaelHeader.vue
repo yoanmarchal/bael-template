@@ -1,18 +1,15 @@
 <template>
   <nav ref="navBar" id="navbar" class="sm-border-bottom">
-    <div class="r sm-border-right">
-
+    <div class="r">
       <div class="c-4 xs-text-left xs-p2 sm-border-right">
         <div class="item">
           <nuxt-link class="sitename" to="/" exact>{{headerSiteName}}</nuxt-link>
         </div>
       </div>
-
       <div class="c-4 sm-border-right xs-p2">
         <div class="item xs-flex">
           <VueFuse placeholder="Search" :compResults="compResults" :keys="keys" :list="allPosts" event-name="searchChanged" />
         </div>
-
       </div>
       <div v-if="blogtitle" style="z-index:55;" class="c-12 xs-border-top  xs-p2 xs-text-6 titlebar">
         <div class="item">
