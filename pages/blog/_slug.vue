@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="xs-border-bottom">
     <div class="full-height single xs-border-left xs-border-right" :style="`min-height:calc(100vh - ${navbarheight}px);margin-top:${navbarheight}px`">
       <div class="xs-mt2 xs-p2 bcg-item">
         <div class="item xs-block xs-full-height">
