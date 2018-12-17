@@ -8,7 +8,7 @@
         </div>
       </div>
 
-      <div class="c-4 xs-border-top  sm-border-left-none sm-border-right xs-p2">
+      <div class="c-4 sm-border-right xs-p2">
         <div class="item xs-flex">
           <VueFuse placeholder="Search" :compResults="compResults" :keys="keys" :list="allPosts" event-name="searchChanged" />
         </div>
