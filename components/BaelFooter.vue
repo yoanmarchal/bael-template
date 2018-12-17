@@ -2,9 +2,9 @@
   <footer class="fill-gray-lighter xs-text-6 md-text-5">
     <div class="r no-gap">
 
-      <div class="c-12 xs-text-left xs-p2 xs-border">
+      <div v-if="pagination" class="c-12 xs-text-left xs-p2 xs-border-right">
         <div class="item xs-text-center">
-          <div v-if="pagination" class="xs-flex xs-flex-justify-space-between xs-flex-align-center">
+          <div  class="xs-flex xs-flex-justify-space-between xs-flex-align-center">
             <div>
               <nuxt-link v-if="this.prevpage > 0" class="bold button button--secondary button--small" :to="`?page=${prevpage}`">Previous</nuxt-link>
               <nuxt-link class="bold button button--secondary button--small" :to="`?page=${nextpage}`" v-if="this.queryParam < this.totalpages">Next</nuxt-link>
@@ -13,18 +13,17 @@
               <span class="text-gray-lightest"> Page {{this.queryParam}} / {{this.totalpages}} - {{this.$store.state.resultsnum}} Results &nbsp; </span>
             </div>
           </div>
-          <div v-else>&nbsp;</div>
 
         </div>
 
       </div>
-      <div class="xs-text-left xs-p2 xs-border" :class="signupAboutSize">
+      <div class="xs-text-left xs-p2 xs-border-right" :class="signupAboutSize">
         <div class="item">
           <div v-show="siteDescription" class="footer__heading xs-mb2">About</div>
           <p v-show="siteDescription">{{siteDescription}}</p>
         </div>
       </div>
-      <div v-if="signupBoolean" class="c-25 xs-text-left xs-p2 xs-border">
+      <div v-if="signupBoolean" class="c-25 xs-text-left xs-p2 xs-border-right ">
         <div v-if="!sent" class="item">
           <div class="footer__heading xs-mb2">Newsletter Signup</div>
           <form @submit.prevent="processForm" action="/.netlify/functions/app" name="mailinglist">
@@ -37,7 +36,7 @@
 
         </div>
       </div>
-      <div class="xs-text-left xs-p2 xs-border" :class="signupAboutSize">
+      <div class="xs-text-left xs-p2 xs-border-right" :class="signupAboutSize">
         <div class="item">
           <div v-show="connectData" class="footer__heading xs-mb2">Connect</div>
           <ul class="list-unstyled">
@@ -47,7 +46,7 @@
           </ul>
         </div>
       </div>
-      <div class="xs-text-left xs-p2 xs-border" :class="signupAboutSize">
+      <div class="xs-text-left xs-p2 xs-border-right" :class="signupAboutSize">
         <div class="item">
           <div class="footer__heading xs-mb2">Deploy</div>
 
