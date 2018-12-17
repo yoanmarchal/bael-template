@@ -1,6 +1,5 @@
 <template>
-  <section class="container xs-border xs-text-5 md-text-4">
-
+  <section class="container xs-text-5 md-text-4">
     <BaelHeader :blogtitle="blogtitle" :thecrumb="this.$store.state.theCrumb" :posts="blogposts" />
     <nuxt/>
     <SlideOut/>
