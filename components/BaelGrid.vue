@@ -1,7 +1,7 @@
 <template>
 <div class="xs-text-6 md-text-5">
-  <div v-if="items2[0]" class="r full-height browse" :style="`height:calc(100vh - ${navbarheight}px);margin-top:${navbarheight}px`">
-    <div v-if="items2[pi]" v-for="(p,pi) in items2" :key="p.pi" class="xs-border-right xs-border-bottom xs-p2 bcg-item">
+  <div v-if="elements" class="r full-height browse" :style="`height:calc(100vh - ${navbarheight}px);margin-top:${navbarheight}px`">
+    <div v-for="(p, index) in elements" :key="index" class="xs-border-right xs-border-bottom xs-p2 bcg-item">
       <div class="item xs-block xs-full-height xs-flex">
         <nuxt-link class="xs-text-center xs-flex xs-full-height xs-flex-align-center xs-flex-justify-center xs-text-center" :to="p._path">
           {{p.title}}
@@ -26,7 +26,7 @@ export default {
       currentPage: null,
       pageNumbers: [],
       pageNumberCount: 0,
-      items2: [],
+      elements: [],
       query: 1,
       busy: false,
       count: 0
@@ -49,12 +49,11 @@ export default {
       if (this.total > this.count && this.busy == false) {
         this.busy = true;
 
-     
-          this.items2.splice(0);
+          this.elements.splice(0);
           for (var i = 0, j = 12; i < j; i++) {
             let api = this.allitems[this.count];
 
-            this.items2.push(api);
+            this.elements.push(api);
             this.count++;
           }
 

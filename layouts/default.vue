@@ -29,8 +29,6 @@ export default {
     if (process.browser) {
       this.$nextTick(() => {
         this.navHeight();
-        console.log(this.$store.state.navheight);
-        console.log("default updated");
       });
     }
   },
@@ -38,8 +36,6 @@ export default {
     if (process.browser) {
       this.$nextTick(() => {
         this.navHeight();
-        console.log(this.$store.state.navheight);
-        console.log("default mounted");
       });
     }
   },
