@@ -1,6 +1,7 @@
 # Bael Netlify CMS Template
 
 ![Bael](https://i.imgur.com/e1zmiB2.jpg "Bael CMS Blog Template")
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fyoanmarchal%2Fbael-template.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fyoanmarchal%2Fbael-template?ref=badge_shield)
 
 > Bael is a free template that gives you an easy way to start a blog that uses modern technologies like static-site JAMstack architecture, CSS grid layout, responsive design, and fuzzy search — all wrapped up in a brutalist aesthetic.
 
@@ -45,3 +46,7 @@ in the `nuxt.config.js`.
 
 MIT License
 
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fyoanmarchal%2Fbael-template.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fyoanmarchal%2Fbael-template?ref=badge_large)
