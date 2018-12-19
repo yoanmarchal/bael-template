@@ -22,7 +22,7 @@
     "bf-solid": "2.10.6",
     "fuse.js": "3.3.0",
     "hoek": "6.1.2",
-    "netlify-lambda": "0.4.0",
+    "netlify-lambda": "1.1.1",
     "node-sass": "4.11.0",
     "nuxt-edge": "latest",
     "sass-loader": "7.1.0",
