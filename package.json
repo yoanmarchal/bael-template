@@ -15,29 +15,29 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.3.6",
-    "@nuxtjs/markdownit": "^1.2.2",
-    "@nuxtjs/pwa": "^2.6.0",
-    "@sendgrid/client": "^6.3.0",
-    "bf-solid": "^2.10.6",
-    "fuse.js": "^3.3.0",
-    "hoek": "^6.1.2",
-    "netlify-lambda": "^0.4.0",
-    "node-sass": "^4.11.0",
+    "@nuxtjs/axios": "5.3.6",
+    "@nuxtjs/markdownit": "1.2.2",
+    "@nuxtjs/pwa": "2.6.0",
+    "@sendgrid/client": "6.3.0",
+    "bf-solid": "2.10.6",
+    "fuse.js": "3.3.0",
+    "hoek": "6.1.2",
+    "netlify-lambda": "0.4.0",
+    "node-sass": "4.11.0",
     "nuxt-edge": "latest",
-    "sass-loader": "^7.1.0",
-    "vue-moment": "^4.0.0"
+    "sass-loader": "7.1.0",
+    "vue-moment": "4.0.0"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.6",
-    "eslint": "^4.19.1",
-    "eslint-config-prettier": "^3.3.0",
-    "eslint-friendly-formatter": "^3.0.0",
-    "eslint-loader": "^1.9.0",
-    "eslint-plugin-prettier": "^3.0.0",
-    "eslint-plugin-vue": "^4.7.1",
-    "glob": "^7.1.2",
-    "prettier": "^1.15.3"
+    "babel-eslint": "8.2.6",
+    "eslint": "4.19.1",
+    "eslint-config-prettier": "3.3.0",
+    "eslint-friendly-formatter": "3.0.0",
+    "eslint-loader": "1.9.0",
+    "eslint-plugin-prettier": "3.0.0",
+    "eslint-plugin-vue": "4.7.1",
+    "glob": "7.1.2",
+    "prettier": "1.15.3"
   },
   "engines": {
     "node": ">10.x.x"
