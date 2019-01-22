@@ -83,7 +83,8 @@ export default {
   font-weight: 700;
 }
 .hamburger {
-  padding: 15px 15px;
+  height: 40px;
+  transform: scale(0.5);
   display: inline-block;
   cursor: pointer;
   transition-property: opacity, filter;
@@ -103,7 +104,7 @@ export default {
 
 .hamburger-box {
   width: 40px;
-  height: 24px;
+  height: 40px;
   display: inline-block;
   position: relative;
 }
@@ -185,15 +186,23 @@ export default {
 
 .zap-slideout-opener {
   position: absolute;
-  top: -4px;
+  top: 0;
   right: 100%;
-  transform: scale(0.5);
+  width: 53px;
+  height: 53px;
   margin-right: 0px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
+
+  .hamburger {
+
+  }
 
   &:hover {
     text-decoration: underline;

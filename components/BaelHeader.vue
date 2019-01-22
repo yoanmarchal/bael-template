@@ -6,7 +6,7 @@
           <nuxt-link class="sitename" to="/" exact>{{headerSiteName}}</nuxt-link>
         </div>
       </div>
-      <div class="c-4 sm-border-right xs-p2">
+      <div class="c-4 sm-border-right xs-flex xs-flex-justify-start xs-flex-align-center">
         <div class="item xs-flex">
           <VueFuse placeholder="Search" :compResults="compResults" :keys="keys" :list="allPosts" event-name="searchChanged" />
         </div>
