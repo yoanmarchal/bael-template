@@ -4,9 +4,11 @@
 
 <script>
 import BaelGrid from '~/components/BaelGrid'
+import { mapGetters, mapActions } from 'vuex'
+
 export default {
   watchQuery: ['page'],
-  async asyncData({ params, app, payload, route, store }) {
+  async asyncData({ store }) {
     await store.commit("SET_TITLE", "Categories");
   },
   transition (to, from) {
@@ -23,9 +25,12 @@ export default {
     };
   },
   computed: {
-    allCategories() {
-      return this.$store.state.allCats
-    }
+    ...mapGetters({
+      allCategories: 'category/getallcats'
+    })
+  },
+  async fetch({ store }) {
+    return store.dispatch("category/getCats");
   }
 };
 </script>

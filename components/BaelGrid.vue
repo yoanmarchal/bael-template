@@ -1,7 +1,7 @@
 <template>
 <div class="xs-text-6 md-text-5">
   <div v-if="elements" class="r full-height browse" :style="`height:calc(100vh - ${navbarheight}px);margin-top:${navbarheight}px`">
-    <div v-for="(p, index) in elements" :key="index" class="xs-border-right xs-border-bottom xs-p2 bcg-item">
+    <div v-for="(p, index) in allitems" :key="index" class="xs-border-right xs-border-bottom xs-p2 bcg-item">
       <div class="item xs-block xs-full-height xs-flex">
         <nuxt-link class="xs-text-center xs-flex xs-full-height xs-flex-align-center xs-flex-justify-center xs-text-center" :to="p._path">
           {{p.title}}

@@ -60,7 +60,7 @@ export default {
   },
   head() {
     return {
-      title: this.title + " | " + this.$store.state.siteInfo.sitename
+      title: `${this.title} | ${this.$store.state.siteInfo.sitename}`
     };
   },
 
