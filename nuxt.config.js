@@ -9,8 +9,8 @@ var path = require("path")
 var dynamicRoutes = getDynamicPaths({
   "/blog": "blog/posts/*.json",
   "/page": "page/posts/*.json",
-  "/category": "categories/posts/*.json",
-  "/tagged": "tags/posts/*.json"
+  "/category": "categories/posts/*.json"
+  // "/tagged": "tags/posts/*.json"
 })
 
 module.exports = {

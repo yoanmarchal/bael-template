@@ -10,9 +10,6 @@ export const mutations = {
   },
   SET_POSTCAT(state, data) {
     state.theCategory = data
-  },
-  SET_TAGS(state, data) {
-    state.allTags = data
   }
 }
 
@@ -31,20 +28,6 @@ export const actions = {
       _path: `/category/${key.replace(".json", "").replace("./", "")}`
     }))
     commit("SET_CATS", pages)
-  },
-  async getTags({ commit }) {
-    const context = await require.context(
-      "@/content/tags/posts/",
-      false,
-      /\.json$/
-    )
-
-    const tags = await context.keys().map(key => ({
-      ...context(key),
-      _path: `/tagged/${key.replace(".json", "").replace("./", "")}`
-    }))
-
-    commit("SET_TAGS", tags)
   }
 }
 

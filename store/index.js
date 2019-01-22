@@ -128,18 +128,6 @@ export const actions = {
       this.$store.commit("SET_GRIDNUMCATS", 12)
     }
   },
-  async getCats({ commit }) {
-    const context = await require.context(
-      "@/content/categories/posts/",
-      false,
-      /\.json$/
-    )
-    const pages = await context.keys().map(key => ({
-      ...context(key),
-      _path: `/category/${key.replace(".json", "").replace("./", "")}`
-    }))
-    commit("SET_CATS", pages)
-  },
   async getTags({ commit }) {
     const context = await require.context(
       "@/content/tags/posts/",

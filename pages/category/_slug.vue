@@ -9,7 +9,7 @@ export default {
     let post = await import(`~/content/categories/posts/${params.slug}.json`);
     await store.commit("SET_TITLE", post.title);
     await store.commit("SET_CRUMB", 'Categories');
-    return post;
+    return post.default
   },
   head() {
     return {
