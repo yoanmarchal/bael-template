@@ -1,83 +1,125 @@
 <template>
-  <div class="zap-slideout xs-border xs-text-6 md-text-5" :class="{ isOpen: $store.state.menuIsActive  }">
+  <div
+    class="zap-slideout xs-border xs-text-6 md-text-5"
+    :class="{ isOpen: $store.state.menuIsActive }"
+  >
     <div class="zap-slideout-opener">
-      <div @click="toggle" class="hamburger hamburger--spin js-hamburger" :class="{'is-active': $store.state.menuIsActive }">
+      <div
+        class="hamburger hamburger--spin js-hamburger"
+        :class="{ 'is-active': $store.state.menuIsActive }"
+        @click="toggle"
+      >
         <div class="hamburger-box">
-          <div class="hamburger-inner"></div>
+          <div class="hamburger-inner" />
         </div>
       </div>
     </div>
     <ul class="zap-slideout-menu list-unstyled black-font">
       <li class="zap-slideout-menu-item">
-        <nuxt-link style="color:#000" class="text-black black-font" to="/" exact>
-        <img style="width:64px;" class="xs-block xs-fit xs-mb2" v-if="this.$store.state.siteInfo.siteicon  && this.$store.state.siteInfo.showmenu" :src="this.$store.state.siteInfo.siteicon" :alt="menuSiteName">
-        {{menuSiteName}}
+        <nuxt-link
+          style="color:#000"
+          class="text-black black-font"
+          to="/"
+          exact
+        >
+          <img
+            v-if="
+              this.$store.state.siteInfo.siteicon &&
+                this.$store.state.siteInfo.showmenu
+            "
+            style="width:64px;"
+            class="xs-block xs-fit xs-mb2"
+            :src="this.$store.state.siteInfo.siteicon"
+            :alt="menuSiteName"
+          />
+          {{ menuSiteName }}
         </nuxt-link>
       </li>
       <li class="zap-slideout-menu-item--small">
-        <nuxt-link to="/" exact>Home</nuxt-link>
+        <nuxt-link to="/" exact>
+          Home
+        </nuxt-link>
       </li>
-         <li v-if="this.$store.state.allCats" class="zap-slideout-menu-item--small">
-        <nuxt-link to="/categories" exact>Categories</nuxt-link>
+      <li
+        v-if="this.$store.state.allCats"
+        class="zap-slideout-menu-item--small"
+      >
+        <nuxt-link to="/categories" exact>
+          Categories
+        </nuxt-link>
       </li>
-      <li v-if="myPages" v-for="(pg,i) in myPages" :key="`pg-${i}`" class="zap-slideout-menu-item--small">
-        <nuxt-link :to="pg._path">{{pg.title}}</nuxt-link>
+      <li
+        v-for="(pg, i) in myPages"
+        v-if="myPages"
+        :key="`pg-${i}`"
+        class="zap-slideout-menu-item--small"
+      >
+        <nuxt-link :to="pg._path">
+          {{ pg.title }}
+        </nuxt-link>
       </li>
       <li v-if="menuLinks" class="xs-mt5 zap-slideout-menu-item black-font">
         Links
       </li>
-      <li v-if="menuLinks" v-for="m in menuLinks" :key="m.position" class="zap-slideout-menu-item--small">
-        <a :href="m.link">{{m.name}}</a>
+      <li
+        v-for="m in menuLinks"
+        v-if="menuLinks"
+        :key="m.position"
+        class="zap-slideout-menu-item--small"
+      >
+        <a :href="m.link">
+          {{ m.name }}
+        </a>
       </li>
     </ul>
   </div>
 </template>
 
-  <script>
+<script>
 export default {
   data() {
     return {
       isOpen: false
-    };
+    }
   },
   computed: {
     menuLinks() {
-      return this.$store.state.siteInfo.menu;
+      return this.$store.state.siteInfo.menu
     },
     myPages() {
-      return this.$store.state.allPages;
+      return this.$store.state.allPages
     },
 
     menuSiteName() {
-      return this.$store.state.siteInfo.sitename;
+      return this.$store.state.siteInfo.sitename
     }
   },
   methods: {
     open() {
-      this.isOpen = true;
+      this.isOpen = true
     },
     close() {
-      this.isOpen = false;
+      this.isOpen = false
     },
     toggle() {
       // Look for .hamburger
-      this.$store.commit("toggleMenuState");
+      this.$store.commit("toggleMenuState")
 
-      var hamburger = document.querySelector(".hamburger");
+      var hamburger = document.querySelector(".hamburger")
       // On click
 
       // Toggle class "is-active"
 
       if (this.isOpen) {
-        this.close();
+        this.close()
       } else {
-        this.open();
+        this.open()
       }
     }
   }
-};
+}
 </script>
-  <style lang="scss">
+<style lang="scss">
 .black-font {
   text-transform: uppercase;
   font-weight: 700;
@@ -172,7 +214,7 @@ export default {
   top: 0;
   width: 34vw;
   height: 100vh;
-  z-index:1000;
+  z-index: 1000;
   padding: 16px;
   background-color: #fff;
   transform: translate3D(100%, 0, 0);
@@ -199,10 +241,6 @@ export default {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-
-  .hamburger {
-
-  }
 
   &:hover {
     text-decoration: underline;

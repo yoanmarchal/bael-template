@@ -1,8 +1,8 @@
-<template >
-    <div v-html="body"></div>
+<template>
+  <div v-html="body" />
 </template>
 <script>
 export default {
-    props: ['body']
+  props: ["body"]
 }
 </script>

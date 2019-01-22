@@ -1,39 +1,39 @@
 <template>
-  <BaelGrid :allitems="postByCat"></BaelGrid>
+  <BaelGrid :allitems="postByCat" />
 </template>
 
 <script>
-import BaelGrid from '~/components/BaelGrid'
+import BaelGrid from "~/components/BaelGrid"
 export default {
   async asyncData({ params, store }) {
-    let post = await import(`~/content/categories/posts/${params.slug}.json`);
-    await store.commit("SET_TITLE", post.title);
-    await store.commit("SET_CRUMB", 'Categories');
+    let post = await import(`~/content/categories/posts/${params.slug}.json`)
+    await store.commit("SET_TITLE", post.title)
+    await store.commit("SET_CRUMB", "Categories")
     return post.default
   },
   head() {
     return {
       title: `${this.title} | ${this.$store.state.siteInfo.sitename}`
-    };
+    }
   },
-  components: {BaelGrid},
-  transition (to, from) {
-    if (!from) return 'slide-right'
-    return +to.query.page > +from.query.page ? 'slide-right' : 'slide-left'
+  components: { BaelGrid },
+  transition(to, from) {
+    if (!from) return "slide-right"
+    return +to.query.page > +from.query.page ? "slide-right" : "slide-left"
+  },
+  computed: {
+    postByCat() {
+      return this.$store.state.blogPosts.filter(obj => {
+        return obj.category == this.title
+      })
+    }
   },
   methods: {
     theSlug() {
       return this.$route.params.slug
-    },
-  },
-  computed: {
-    postByCat() {
-      return this.$store.state.blogPosts.filter((obj) => {
-        return obj.category == this.title
-      });
     }
   }
-};
+}
 </script>
 
 <style>

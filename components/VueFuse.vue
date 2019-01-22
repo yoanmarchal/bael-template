@@ -1,11 +1,23 @@
 <template>
   <div class="searchwrapper xs-relative">
-    <input class="search xs-flex-grow-1 text-input xs-border-none xs-fit xs-text-5 md-text-4 xs-m0 xs-p0" type="search" v-model="value" :placeholder="placeholder">
-    <img class="xs-absolute searchicon xs-r0 sm-l0" src="~/assets/bx-search.svg">
+    <input
+      v-model="value"
+      class="search xs-flex-grow-1 text-input xs-border-none xs-fit xs-text-5 md-text-4 xs-m0 xs-p0"
+      type="search"
+      :placeholder="placeholder"
+    >
+    <img
+      class="xs-absolute searchicon xs-r0 sm-l0"
+      src="~/assets/bx-search.svg"
+    >
     <ul class="xs-absolute results">
-      <li class="xs-border xs-p2 fill-white" v-for="(xx,i) in compResults" :key="i">
+      <li
+        v-for="(xx, i) in compResults"
+        :key="i"
+        class="xs-border xs-p2 fill-white"
+      >
         <a :href="`${xx._path}/`">
-          {{xx.title}}
+          {{ xx.title }}
         </a>
       </li>
     </ul>
@@ -14,89 +26,10 @@
 
 <script>
 if (process.browser) {
-  var Fuse = require("fuse.js");
+  var Fuse = require("fuse.js")
 }
 export default {
-  data() {
-    return {
-      fuse: null,
-      value: "",
-      result: []
-    };
-  },
   name: "VueFuse",
-  computed: {
-    options() {
-      var options = {
-        caseSensitive: this.caseSensitive,
-        includeScore: this.includeScore,
-        includeMatches: this.includeMatches,
-        tokenize: this.tokenize,
-        matchAllTokens: this.matchAllTokens,
-        findAllMatches: this.findAllMatches,
-        shouldSort: this.shouldSort,
-        threshold: this.threshold,
-        location: this.location,
-        distance: this.distance,
-        maxPatternLength: this.maxPatternLength,
-        minMatchCharLength: this.minMatchCharLength,
-        keys: this.keys
-      };
-      if (this.id !== "") {
-        options.id = this.id;
-      }
-      return options;
-    }
-  },
-  watch: {
-    list() {
-      this.fuse.list = this.list;
-      this.fuseSearch();
-    },
-    search() {
-      this.value = this.search;
-    },
-    value() {
-      this.$parent.$emit(this.inputChangeEventName, this.value);
-      this.fuseSearch();
-    },
-    result() {
-      this.$parent.$emit(this.eventName, this.result);
-    }
-  },
-  methods: {
-    initFuse() {
-      this.fuse = new Fuse(this.list, this.options);
-      if (this.defaultAll) {
-        this.result = this.list;
-      }
-      if (this.search) {
-        this.value = this.search;
-      }
-    },
-    fuseSearch() {
-      if (this.value.trim() === "")
-        if (this.defaultAll) {
-          this.result = this.list;
-        } else {
-          this.result = [];
-        }
-      else this.result = this.fuse.search(this.value.trim());
-    }
-  },
-  /**
-   * Vue 1.x
-   */
-
-  /**
-   * Vue 2.x
-   */
-  mounted() {
-    this.initFuse();
-    this.$on("searchChanged", results => {
-      this.compResults = results;
-    });
-  },
   props: {
     compResults: {
       type: Array
@@ -179,8 +112,87 @@ export default {
     keys: {
       type: Array
     }
+  },
+  data() {
+    return {
+      fuse: null,
+      value: "",
+      result: []
+    }
+  },
+  computed: {
+    options() {
+      var options = {
+        caseSensitive: this.caseSensitive,
+        includeScore: this.includeScore,
+        includeMatches: this.includeMatches,
+        tokenize: this.tokenize,
+        matchAllTokens: this.matchAllTokens,
+        findAllMatches: this.findAllMatches,
+        shouldSort: this.shouldSort,
+        threshold: this.threshold,
+        location: this.location,
+        distance: this.distance,
+        maxPatternLength: this.maxPatternLength,
+        minMatchCharLength: this.minMatchCharLength,
+        keys: this.keys
+      }
+      if (this.id !== "") {
+        options.id = this.id
+      }
+      return options
+    }
+  },
+  watch: {
+    list() {
+      this.fuse.list = this.list
+      this.fuseSearch()
+    },
+    search() {
+      this.value = this.search
+    },
+    value() {
+      this.$parent.$emit(this.inputChangeEventName, this.value)
+      this.fuseSearch()
+    },
+    result() {
+      this.$parent.$emit(this.eventName, this.result)
+    }
+  },
+  /**
+   * Vue 1.x
+   */
+
+  /**
+   * Vue 2.x
+   */
+  mounted() {
+    this.initFuse()
+    this.$on("searchChanged", results => {
+      this.compResults = results
+    })
+  },
+  methods: {
+    initFuse() {
+      this.fuse = new Fuse(this.list, this.options)
+      if (this.defaultAll) {
+        this.result = this.list
+      }
+      if (this.search) {
+        this.value = this.search
+      }
+    },
+    fuseSearch() {
+      if (this.value.trim() === "")
+        if (this.defaultAll) {
+          this.result = this.list
+        } else {
+          this.result = []
+        }
+      else this.result = this.fuse.search(this.value.trim())
+    }
   }
-};
+}
 </script>
 <style>
 .searchwrapper {

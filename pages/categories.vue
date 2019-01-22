@@ -1,38 +1,38 @@
 <template>
-  <BaelGrid :allitems="allCategories"></BaelGrid>
+  <BaelGrid :allitems="allCategories" />
 </template>
 
 <script>
-import BaelGrid from '~/components/BaelGrid'
-import { mapGetters, mapActions } from 'vuex'
+import BaelGrid from "~/components/BaelGrid"
+import { mapGetters, mapActions } from "vuex"
 
 export default {
-  watchQuery: ['page'],
+  watchQuery: ["page"],
   async asyncData({ store }) {
-    await store.commit("SET_TITLE", "Categories");
+    await store.commit("SET_TITLE", "Categories")
   },
-  transition (to, from) {
-    if (!from) return 'fade'
-    return +to.query.page > +from.query.page ? 'slide-right' : 'slide-left'
+  transition(to, from) {
+    if (!from) return "fade"
+    return +to.query.page > +from.query.page ? "slide-right" : "slide-left"
   },
-  components: {BaelGrid},
+  components: { BaelGrid },
   data() {
-    return {};
+    return {}
   },
   head() {
     return {
       title: "Categories | " + this.$store.state.siteInfo.sitename
-    };
+    }
   },
   computed: {
     ...mapGetters({
-      allCategories: 'category/getallcats'
+      allCategories: "category/getallcats"
     })
   },
   async fetch({ store }) {
-    return store.dispatch("category/getCats");
+    return store.dispatch("category/getCats")
   }
-};
+}
 </script>
 
 <style>
