@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
-var siteInfo = require("./content/setup/info.json")
-var glob = require("glob")
-var path = require("path")
+import siteInfo from './content/setup/info.json'
+import glob from 'glob'
+import path from 'path'
 
 // Enhance Nuxt's generate process by gathering all content files from Netifly CMS
 // automatically and match it to the path of your Nuxt routes.
@@ -9,8 +9,8 @@ var path = require("path")
 var dynamicRoutes = getDynamicPaths({
   "/blog": "blog/posts/*.json",
   "/page": "page/posts/*.json",
-  "/category": "categories/posts/*.json",
-  "/tagged": "tags/posts/*.json"
+  "/category": "categories/posts/*.json"
+  // "/tagged": "tags/posts/*.json"
 })
 
 module.exports = {
