@@ -20,7 +20,7 @@
     "@nuxtjs/pwa": "2.6.0",
     "@sendgrid/client": "6.3.0",
     "bf-solid": "2.10.6",
-    "fuse.js": "3.4.1",
+    "fuse.js": "3.4.2",
     "hoek": "6.1.2",
     "netlify-lambda": "0.4.0",
     "node-sass": "4.11.0",
