@@ -8,6 +8,7 @@
     >
     <img
       class="xs-absolute searchicon xs-r0 sm-l0"
+      alt="search" 
       src="~/assets/bx-search.svg"
     >
     <ul class="xs-absolute results">
