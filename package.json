@@ -19,7 +19,7 @@
     "@nuxtjs/markdownit": "1.2.2",
     "@nuxtjs/pwa": "2.6.0",
     "@sendgrid/client": "6.3.0",
-    "bf-solid": "2.10.6",
+    "bf-solid": "2.10.9",
     "fuse.js": "3.4.2",
     "hoek": "6.1.2",
     "netlify-lambda": "0.4.0",
