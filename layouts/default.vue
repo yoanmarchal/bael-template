@@ -1,14 +1,20 @@
 <template>
-  <section class="container xs-text-5 md-text-4">
-    <BaelHeader
-      :blogtitle="blogtitle"
-      :thecrumb="this.$store.state.theCrumb"
-      :posts="blogposts"
-    />
-    <nuxt />
-    <SlideOut />
-    <BaelFooter :pagination="paginate" />
-  </section>
+  <div class="app">
+    <header>
+      <BaelHeader
+          :blogtitle="blogtitle"
+          :thecrumb="this.$store.state.theCrumb"
+          :posts="blogposts"
+        />
+    </header>
+    <main>
+      <nuxt />
+      <SlideOut />
+    </main>
+    <footer>
+      <BaelFooter :pagination="paginate" />
+    </footer>
+  </div>
 </template>
 <script>
 import SlideOut from "~/components/SlideOut"
@@ -114,5 +120,15 @@ body {
 }
 .post-content {
   max-width: 75ch;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
 }
 </style>
