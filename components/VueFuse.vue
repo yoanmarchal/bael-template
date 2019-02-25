@@ -1,7 +1,9 @@
 <template>
   <div class="searchwrapper xs-relative">
+    <label for="seach">search</label> 
     <input
       v-model="value"
+      id="search"
       class="search xs-flex-grow-1 text-input xs-border-none xs-fit xs-text-5 md-text-4 xs-m0 xs-p0"
       type="search"
       :placeholder="placeholder"

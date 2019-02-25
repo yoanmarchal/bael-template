@@ -1,14 +1,20 @@
 <template>
-  <section class="container xs-text-5 md-text-4">
-    <BaelHeader
-      :blogtitle="blogtitle"
-      :thecrumb="this.$store.state.theCrumb"
-      :posts="blogposts"
-    />
-    <nuxt />
-    <SlideOut />
-    <BaelFooter :pagination="paginate" />
-  </section>
+  <div class="app">
+    <header>
+      <BaelHeader
+          :blogtitle="blogtitle"
+          :thecrumb="this.$store.state.theCrumb"
+          :posts="blogposts"
+        />
+    </header>
+    <main>
+      <nuxt />
+      <SlideOut />
+    </main>
+    <footer>
+      <BaelFooter :pagination="paginate" />
+    </footer>
+  </div>
 </template>
 <script>
 import SlideOut from "~/components/SlideOut"
