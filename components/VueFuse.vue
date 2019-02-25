@@ -1,6 +1,6 @@
 <template>
   <div class="searchwrapper xs-relative">
-    <label for="seach">search</label> 
+    <label for="seach" class="sr-only">search</label> 
     <input
       v-model="value"
       id="search"
