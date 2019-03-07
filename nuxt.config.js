@@ -38,7 +38,7 @@ module.exports = {
       }
     ]
   },
-  css: ["~/assets/grid.css", "bf-solid/dist/solid.2.10.9.css"],
+  css: ["~/assets/grid.css", "bf-solid/dist/solid.latest.css"],
   // icon: {
   //   iconSrc: `${siteInfo.siteicon}`
   //  },
