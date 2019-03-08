@@ -31,11 +31,7 @@ module.exports = {
       }
     ],
     link: [
-      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css?family=Archivo+Black"
-      }
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" }
     ]
   },
   css: ["~/assets/grid.css", "bf-solid/dist/solid.latest.css"],
@@ -46,7 +42,12 @@ module.exports = {
    ** Customize the progress bar color
    */
   loading: { color: "#3B8070" },
-  modules: ["@nuxtjs/markdownit", "@nuxtjs/pwa", "@nuxtjs/axios"],
+  modules: ["@nuxtjs/markdownit", "@nuxtjs/pwa", "@nuxtjs/axios", 'nuxt-webfontloader'],
+  webfontloader: {
+    google: {
+      families: ['Archivo+Black:400'] //Loads Lato font with weights 400 and 700
+    }
+  },
   markdownit: {
     injected: true,
     preset: "default",
