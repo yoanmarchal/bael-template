@@ -1,5 +1,5 @@
 <template>
-  <div class="xs-text-3 md-text-3">
+  <div class="xs-text-2 md-text-2">
     <div
       v-if="elements"
       class="r full-height browse"

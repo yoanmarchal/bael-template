@@ -24,7 +24,7 @@
       <div
         v-if="blogtitle"
         style="z-index:55;"
-        class="c-12 xs-border-top  xs-p2 xs-text-3 titlebar"
+        class="c-12 xs-border-top  xs-p2 xs-text-2 titlebar"
       >
         <div class="item">
           <nuxt-link to="/" exact>

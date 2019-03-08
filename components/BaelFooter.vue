@@ -1,5 +1,5 @@
 <template>
-  <footer class="fill-gray-lighter xs-text-3 md-text-3">
+  <footer class="fill-gray-lighter xs-text-2 md-text-2">
     <div class="r no-gap">
       <div v-if="pagination" class="c-12 xs-text-left xs-p2 xs-border-right">
         <div class="item xs-text-center">
@@ -106,7 +106,7 @@
         </div>
       </div>
       <div class="c-12 xs-text-left xs-p2 xs-border">
-        <div class="item xs-text-3">
+        <div class="item xs-text-2">
           An open source design by
           <a href="https://jake101.com">
             jake101
