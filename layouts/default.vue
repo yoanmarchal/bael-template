@@ -68,19 +68,35 @@ export default {
 }
 </script>
 
-<style>
-html,
+<style lang="scss">
+:root {
+  font-size: 62.5%;
+}
+
 body {
+  font-size: 1rem;
+  image-rendering: optimizeQuality;
+  text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
+
+main {
+  font-size: 1.8rem;
+}
+
 .main-title {
-  font-size: 3rem;
-  font-family: "Archivo Black", sans-serif;
-  font-weight: 400;
+  font-size: 4.3rem;
+  font-family: arial, sans-serif;
+  font-weight: 900;
   line-height: 1;
+
+  .wf-active & {
+    font-family: "Archivo Black";
+    font-weight: 400;
+  }
 }
 .feat-wrapper {
   max-height: 55vh;

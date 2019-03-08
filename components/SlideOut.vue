@@ -1,6 +1,6 @@
 <template>
   <div
-    class="zap-slideout xs-border xs-text-6 md-text-5"
+    class="zap-slideout xs-border xs-text-3 md-text-3"
     :class="{ isOpen: $store.state.menuIsActive }"
   >
     <div class="zap-slideout-opener">

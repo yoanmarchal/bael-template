@@ -24,7 +24,7 @@
       <div
         v-if="blogtitle"
         style="z-index:55;"
-        class="c-12 xs-border-top  xs-p2 xs-text-6 titlebar"
+        class="c-12 xs-border-top  xs-p2 xs-text-3 titlebar"
       >
         <div class="item">
           <nuxt-link to="/" exact>
@@ -104,7 +104,7 @@ export default {
   }
 }
 </script>
-<style>
+<style lang="scss">
 #navbar {
   z-index: 999;
 }
@@ -129,10 +129,15 @@ nav {
 }
 .sitename {
   color: #000;
-  font-family: "Archivo Black", sans-serif;
+  font-family: arial, sans-serif;
   text-transform: uppercase;
-  font-weight: 400;
-  font-size: 18px;
+  font-weight: 900;
+  font-size: 2rem;
+
+  .wf-active & {
+    font-family: "Archivo Black";
+    font-weight: 400;
+  }
 }
 @media only screen and (max-width: 40rem) {
   .results {
