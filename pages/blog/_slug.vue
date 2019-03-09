@@ -1,52 +1,50 @@
 <template>
-  <main class="xs-border-bottom">
-    <div
-      class="full-height single xs-border-left xs-border-right"
-      :style="
-        `min-height:calc(100vh - ${navbarheight}px);margin-top:${navbarheight}px`
-      "
-    >
-      <div class="xs-mt2 xs-p2 bcg-item">
-        <div class="item xs-block xs-full-height">
-          <div v-if="theThumb" class="feat-wrapper">
-            <transition appear name="fade">
-              <img class="featured-image" :src="thumbnail" :alt="title" >
-            </transition>
+  <div
+    class="full-height single xs-border-left xs-border-right xs"
+    :style="
+      `min-height:calc(100vh - ${navbarheight}px);margin-top:${navbarheight}px`
+    "
+  >
+    <div class="xs-mt2 xs-p2 bcg-item">
+      <div class="item xs-block xs-full-height">
+        <div v-if="theThumb" class="feat-wrapper">
+          <transition appear name="fade">
+            <img class="featured-image" :src="thumbnail" :alt="title" >
+          </transition>
+        </div>
+        <h1 class="xs-py3 main-title">
+          {{ title }}
+        </h1>
+        <no-ssr>
+          <div class="xs-mt-5 bold">
+            <ul class="list-unstyled xs-flex xs-flex-align-center">
+              <li
+                v-if="this.$store.state.theCategory"
+                class="xs-inline-block xs-mr1"
+              >
+                <div class="tag fill-gray-darker xs-border">
+                  <nuxt-link
+                    :to="
+                      `/category/${this.$store.state.theCategory.toLowerCase()}`
+                    "
+                    class="tag__link text-white"
+                  >
+                    {{ this.$store.state.theCategory }}
+                  </nuxt-link>
+                </div>
+              </li>
+              <li class="xs-inline-block">
+                {{ date }}
+              </li>
+            </ul>
           </div>
-          <h1 class="xs-py3 main-title">
-            {{ title }}
-          </h1>
-          <no-ssr>
-            <div class="xs-mt-5 bold">
-              <ul class="list-unstyled xs-flex xs-flex-align-center">
-                <li
-                  v-if="this.$store.state.theCategory"
-                  class="xs-inline-block xs-mr1"
-                >
-                  <div class="tag fill-gray-darker xs-border">
-                    <nuxt-link
-                      :to="
-                        `/category/${this.$store.state.theCategory.toLowerCase()}`
-                      "
-                      class="tag__link text-white"
-                    >
-                      {{ this.$store.state.theCategory }}
-                    </nuxt-link>
-                  </div>
-                </li>
-                <li class="xs-inline-block">
-                  {{ date }}
-                </li>
-              </ul>
-            </div>
-          </no-ssr>
-          <div class="xs-py3 post-content text-gray-lighter">
-            <div v-html="$md.render(body)" />
-          </div>
+        </no-ssr>
+        <div class="xs-py3 post-content text-gray-lighter">
+          <div v-html="$md.render(body)" />
         </div>
       </div>
     </div>
-  </main>
+  </div>
 </template>
 <script>
 import MdWrapper from "~/components/MdWrapper"

@@ -31,7 +31,17 @@ module.exports = {
       }
     ],
     link: [
-      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" }
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      {
+        rel: "preconnect",
+        href: "https://fonts.googleapis.com/",
+        crossorigin: true
+      },
+      {
+        rel: "preconnect",
+        href: "https://fonts.gstatic.com/",
+        crossorigin: true
+      }
     ]
   },
   css: ["~/assets/grid.css", "bf-solid/dist/solid.latest.css"],
