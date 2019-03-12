@@ -2094,10 +2094,10 @@ bcrypt-pbkdf@^1.0.0:
   dependencies:
     tweetnacl "^0.14.3"
 
-bf-solid@2.10.10:
-  version "2.10.10"
-  resolved "https://registry.yarnpkg.com/bf-solid/-/bf-solid-2.10.10.tgz#3e02427d5ee407ee9afd0ed1986ec39696d03835"
-  integrity sha512-mv/DM2GSs2sE6aujjBUwDM2dyqNxxWTM5LaY5uh2oVYuHjmZkzW1wBxfgKId/lgnisX545PAGjYLQ9h0OotmwA==
+bf-solid@2.11.0:
+  version "2.11.0"
+  resolved "https://registry.yarnpkg.com/bf-solid/-/bf-solid-2.11.0.tgz#d98aa8f4308e551d08e3680ab8037e50060bf70e"
+  integrity sha512-kkjbqQA9T+eCAU01EY7pI3sLVFUnIXU6grWkYBZIq66xMuqs4Bq+zAdDxZS+DGWzsCFOjqCZ1KZfUwZKBdAs8A==
 
 bfj@^6.1.1:
   version "6.1.1"
