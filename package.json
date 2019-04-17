@@ -22,9 +22,9 @@
     "bf-solid": "2.11.0",
     "fuse.js": "3.4.4",
     "hoek": "6.1.3",
-    "netlify-lambda": "1.4.3",
+    "netlify-lambda": "1.4.5",
     "node-sass": "4.11.0",
-    "nuxt": "2.6.1",
+    "nuxt": "2.6.2",
     "nuxt-webfontloader": "^1.0.0",
     "sass-loader": "7.1.0",
     "vue-moment": "4.0.0"
