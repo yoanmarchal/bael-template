@@ -165,6 +165,7 @@ nav .r {
 .r.full-height {
   grid-gap: 0;
 }
+
 @media only screen and (max-width: 40rem) {
   .main-title {
     font-size: 2rem;
@@ -179,4 +180,5 @@ nav .r {
   .xs-visible {
     visibility: visible;
   }
+
 }

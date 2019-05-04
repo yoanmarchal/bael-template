@@ -39,6 +39,9 @@ export default {
 <style>
 .browse a {
   width: 100%;
+  text-transform: lowercase;
+  font-variant: all-small-caps;
+  font-size: 1.3rem;
 }
 .search:focus {
   outline: none;
