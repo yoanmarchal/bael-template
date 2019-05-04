@@ -8,14 +8,14 @@
           >
             <div>
               <nuxt-link
-                v-if="this.prevpage > 0"
+                v-if="prevpage > 0"
                 class="bold button button--secondary button--small"
                 :to="`?page=${prevpage}`"
               >
                 Previous
               </nuxt-link>
               <nuxt-link
-                v-if="this.queryParam < this.totalpages"
+                v-if="queryParam < totalpages"
                 class="bold button button--secondary button--small"
                 :to="`?page=${nextpage}`"
               >
@@ -24,7 +24,7 @@
             </div>
             <div>
               <span class="text-gray-lightest">
-                Page {{ this.queryParam }} / {{ this.totalpages }} -
+                Page {{ queryParam }} / {{ totalpages }} -
                 {{ this.$store.state.resultsnum }} Results &nbsp;
               </span>
             </div>

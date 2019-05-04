@@ -161,9 +161,9 @@ export default {
 
     navHeight() {
       if (process.browser) {
-        var height = document.getElementById("navbar").clientHeight
+        var navHeight = document.getElementById("navbar").clientHeight
 
-        this.$store.commit("SET_NAVHEIGHT", height - 1)
+        this.$store.commit("SET_NAVHEIGHT", navHeight - 1)
       }
     }
   }
@@ -171,9 +171,9 @@ export default {
 </script>
 
 <style lang="scss">
-  .styled-anchor {
-    text-transform: lowercase;
-    font-variant: all-small-caps;
-    font-size: 1.3rem;
-  }
+.styled-anchor {
+  text-transform: lowercase;
+  font-variant: all-small-caps;
+  font-size: 1.3rem;
+}
 </style>

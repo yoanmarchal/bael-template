@@ -2,10 +2,10 @@
   <div class="app">
     <header>
       <BaelHeader
-          :blogtitle="blogtitle"
-          :thecrumb="this.$store.state.theCrumb"
-          :posts="blogposts"
-        />
+        :blogtitle="blogtitle"
+        :thecrumb="this.$store.state.theCrumb"
+        :posts="blogposts"
+      />
     </header>
     <main>
       <nuxt />
@@ -144,7 +144,7 @@ main {
   padding: 0;
   margin: -1px;
   overflow: hidden;
-  clip: rect(0,0,0,0);
+  clip: rect(0, 0, 0, 0);
   border: 0;
 }
 a {
