@@ -10,11 +10,11 @@
       <div
         v-for="(p, index) in allitems"
         :key="index"
-        class="xs-border-right xs-border-bottom xs-p2 bcg-item"
+        class="xs-border-right xs-border-bottom bcg-item"
       >
         <div class="item xs-block xs-full-height xs-flex">
           <nuxt-link
-            class="xs-text-center xs-flex xs-full-height xs-flex-align-center xs-flex-justify-center xs-text-center"
+            class="styled-anchor xs-text-center xs-flex xs-full-height xs-flex-align-center xs-flex-justify-center xs-text-center"
             :to="p._path"
           >
             {{ p.title }}
@@ -170,4 +170,10 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="scss">
+  .styled-anchor {
+    text-transform: lowercase;
+    font-variant: all-small-caps;
+    font-size: 1.3rem;
+  }
+</style>

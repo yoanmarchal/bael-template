@@ -147,4 +147,7 @@ main {
   clip: rect(0,0,0,0);
   border: 0;
 }
+a {
+  color: #212121;
+}
 </style>
