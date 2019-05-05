@@ -106,9 +106,6 @@ export default {
 }
 </script>
 <style lang="scss">
-#navbar {
-  z-index: 999;
-}
 .titlebar .item {
   overflow-x: none;
 }

@@ -1,6 +1,6 @@
 <template>
   <div class="searchwrapper xs-relative">
-    <label for="seach" class="sr-only">search</label> 
+    <label for="seach" class="sr-only">search</label>
     <input
       v-model="value"
       id="search"
@@ -10,7 +10,7 @@
     >
     <img
       class="xs-absolute searchicon xs-r0 sm-l0"
-      alt="search" 
+      alt="search"
       src="~/assets/bx-search.svg"
     >
     <ul class="xs-absolute results">
