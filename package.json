@@ -28,7 +28,7 @@
     "nuxt-webfontloader": "^1.0.0",
     "sass-loader": "7.1.0",
     "vue-moment": "4.0.0",
-    "tar": "^4.4.2"
+    "tar": "^4.4.8"
   },
   "devDependencies": {
     "babel-eslint": "10.0.1",
