@@ -18,7 +18,7 @@
     "@nuxtjs/axios": "5.4.1",
     "@nuxtjs/markdownit": "1.2.4",
     "@nuxtjs/pwa": "3.0.0-beta.14",
-    "@sendgrid/client": "6.3.0",
+    "@sendgrid/client": "6.4.0",
     "bf-solid": "2.11.0",
     "fuse.js": "3.4.4",
     "hoek": "6.1.3",
