@@ -18,7 +18,7 @@ export default {
   /*
    ** Headers of the page
    */
-  transition: { mode: "in-out" },
+  pageTransition: { mode: "in-out" },
   head: {
     title: siteInfo.sitename,
     meta: [
