@@ -13,7 +13,7 @@ var dynamicRoutes = getDynamicPaths({
   // "/tagged": "tags/posts/*.json"
 })
 
-module.exports = {
+export default {
   mode: "universal",
   /*
    ** Headers of the page
