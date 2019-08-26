@@ -33,7 +33,7 @@
     "vue-moment": "4.0.0"
   },
   "devDependencies": {
-    "babel-eslint": "10.0.2",
+    "babel-eslint": "10.0.3",
     "eslint": "6.2.2",
     "eslint-config-prettier": "6.1.0",
     "eslint-friendly-formatter": "4.0.1",
