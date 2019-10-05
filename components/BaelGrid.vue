@@ -4,22 +4,21 @@
       v-if="elements"
       class="r full-height browse"
       :style="
-        `height:calc(100vh - ${navbarheight}px);margin-top:${navbarheight}px`
+        `height:calc(100vh - ${navbarheight}px);
+         margin-top:${navbarheight}px;`
       "
     >
       <div
         v-for="(p, index) in allitems"
         :key="index"
-        class="xs-border-right xs-border-bottom bcg-item"
-      >
-        <div class="item xs-block xs-full-height xs-flex">
-          <nuxt-link
-            class="styled-anchor xs-text-center xs-flex xs-full-height xs-flex-align-center xs-flex-justify-center xs-text-center"
-            :to="p._path"
-          >
-            {{ p.title }}
-          </nuxt-link>
-        </div>
+        v-bind:class="[allitems.length == 1 ? 'c-12' : 'bcg-item']"
+        class="xs-border-right xs-border-bottom"
+        :style="{backgroundImage: `url(${p.thumbnail})` }" >
+        <nuxt-link 
+        :to="p._path"
+        class="item xs-block xs-full-height xs-flex styled-anchor xs-text-center xs-flex xs-full-height xs-flex-align-center xs-flex-justify-center xs-text-center">
+               {{ p.title }}
+        </nuxt-link>
       </div>
     </div>
     <div v-else class="r full-height browse">
@@ -27,8 +26,7 @@
         class="xs-p2 c-100 xs-flex xs-flex-align-center xs-flex-justify-center xs-text-center"
         :style="
           `height:calc(100vh - ${navbarheight}px);margin-top:${navbarheight}px`
-        "
-      >
+        ">
         <div v-if="total < 1 && !busy">
           No Results.
         </div>
