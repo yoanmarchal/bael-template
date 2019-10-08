@@ -15,7 +15,7 @@
         <h1 class="xs-py3 main-title">
           {{ title }}
         </h1>
-        <no-ssr>
+        <client-only>
           <div class="xs-mt-5 bold">
             <ul class="list-unstyled xs-flex xs-flex-align-center">
               <li
@@ -38,7 +38,7 @@
               </li>
             </ul>
           </div>
-        </no-ssr>
+        </client-only>
         <div class="xs-py3 post-content text-gray-lighter">
           <div v-html="$md.render(body)" />
         </div>

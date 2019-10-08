@@ -91,10 +91,6 @@ export default {
    ** Route config for pre-rendering
    */
   router: {
-    // eslint-disable-next-line no-unused-vars
-    scrollBehavior: function(to, from, savedPosition) {
-      return { x: 0, y: 0 }
-    },
     middleware: ["title"]
   },
   generate: {
@@ -111,10 +107,40 @@ export default {
    ** Build configuration
    */
   build: {
-    extractCSS: true
+    extractCSS: true,
     /*
      ** Run ESLint on save
      */
+    html: {
+      minify: {
+        collapseBooleanAttributes: true,
+        decodeEntities: true,
+        minifyCSS: false,
+        minifyJS: false,
+        processConditionalComments: true,
+        removeEmptyAttributes: true,
+        removeRedundantAttributes: true,
+        trimCustomFragments: true,
+        useShortDoctype: true
+      }
+    },
+    postcss: {
+      // Add plugin names as key and arguments as value
+      // Install them before as dependencies with npm or yarn
+      plugins: {
+        // Disable a plugin by passing false as value 
+        'postcss-url': false,
+        'postcss-nested': {},
+        'postcss-responsive-type': {},
+        'postcss-hexrgba': {}
+      },
+      preset: {
+        // Change the postcss-preset-env settings
+        autoprefixer: {
+
+        }
+      }
+    }
   }
 }
 /**

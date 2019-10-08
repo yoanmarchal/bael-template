@@ -3,6 +3,7 @@
   command = "npm run generate && npm run build:api"
   functions = "./functions"
 [build.environment]
+  CI = "1"
   NODE_VERSION = "10"
   YARN_VERSION = "1.17.3"
   YARN_FLAGS = "--no-ignore-optional"
