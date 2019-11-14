@@ -40,12 +40,12 @@
     "eslint-friendly-formatter": "4.0.1",
     "eslint-loader": "3.0.2",
     "eslint-plugin-prettier": "3.1.1",
-    "eslint-plugin-vue": "6.0.0",
-    "glob": "7.1.5",
+    "eslint-plugin-vue": "6.0.1",
+    "glob": "7.1.6",
     "postcss-hexrgba": "^2.0.0",
-    "postcss-nested": "^4.1.2",
+    "postcss-nested": "^4.2.1",
     "postcss-responsive-type": "^1.0.0",
-    "prettier": "1.18.2"
+    "prettier": "1.19.1"
   },
   "engines": {
     "node": "10.17.0"
