@@ -1,6 +1,6 @@
 <template>
   <div
-    class="zap-slideout xs-border xs-text-2 md-text-2"
+    class="zap-slideout xs-text-2 md-text-2"
     :class="{ isOpen: $store.state.menuIsActive }"
   >
     <div class="zap-slideout-opener">
@@ -31,7 +31,7 @@
             class="xs-block xs-fit xs-mb2"
             :src="this.$store.state.siteInfo.siteicon"
             :alt="menuSiteName"
-          />
+          >
           {{ menuSiteName }}
         </nuxt-link>
       </li>

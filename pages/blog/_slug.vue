@@ -1,6 +1,6 @@
 <template>
   <div
-    class="full-height single xs-border-left xs-border-right xs"
+    class="full-height single xs"
     :style="
       `min-height:calc(100vh - ${navbarheight}px);margin-top:${navbarheight}px`
     "
@@ -9,7 +9,7 @@
       <div class="item xs-block xs-full-height">
         <div v-if="theThumb" class="feat-wrapper">
           <transition appear name="fade">
-            <img class="featured-image" :src="thumbnail" :alt="title" >
+            <img class="featured-image" :src="thumbnail" :alt="title">
           </transition>
         </div>
         <h1 class="xs-py3 main-title">
@@ -50,6 +50,25 @@
 import MdWrapper from "~/components/MdWrapper"
 
 export default {
+  components: {
+    MdWrapper
+  },
+
+  data() {
+    return {}
+  },
+
+  computed: {
+    theThumb() {
+      return this.$store.state.theThumbnail
+    },
+    allBlogPosts() {
+      return this.$store.state.blogPosts
+    },
+    navbarheight() {
+      return this.$store.state.navheight
+    }
+  },
   async asyncData({ params, store }) {
     let post = await import(`~/content/blog/posts/${params.slug}.json`)
     await store.commit("SET_TITLE", post.default.title)
@@ -69,25 +88,6 @@ export default {
   head() {
     return {
       title: `${this.title} | ${this.$store.state.siteInfo.sitename}`
-    }
-  },
-  components: {
-    MdWrapper
-  },
-
-  data() {
-    return {}
-  },
-
-  computed: {
-    theThumb() {
-      return this.$store.state.theThumbnail
-    },
-    allBlogPosts() {
-      return this.$store.state.blogPosts
-    },
-    navbarheight() {
-      return this.$store.state.navheight
     }
   },
   updated() {

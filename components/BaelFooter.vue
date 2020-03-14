@@ -1,7 +1,7 @@
 <template>
-  <footer class="fill-gray-lighter xs-text-2 md-text-2 xs-border-top">
+  <footer class="xs-text-2 md-text-2">
     <div class="r no-gap">
-      <div v-if="pagination" class="c-12 xs-text-left xs-p2 xs-border-right xs-border-bottom">
+      <div v-if="pagination" class="c-12 xs-text-left xs-p2">
         <div class="item xs-text-center">
           <div
             class="xs-flex xs-flex-justify-space-between xs-flex-align-center"
@@ -31,7 +31,7 @@
           </div>
         </div>
       </div>
-      <div class="xs-text-left xs-p2  xs-border-right" :class="signupAboutSize">
+      <div class="xs-text-left xs-p2" :class="signupAboutSize">
         <div class="item">
           <div v-show="siteDescription" class="footer__heading xs-mb2">
             About
@@ -41,7 +41,7 @@
           </p>
         </div>
       </div>
-      <div v-if="signupBoolean" class="c-25 xs-text-left xs-p2 xs-border-right xs-border-top sm-border-top-none sm-border-right">
+      <div v-if="signupBoolean" class="c-25 xs-text-left xs-p2">
         <div v-if="!sent" class="item">
           <div class="footer__heading xs-mb2">
             Newsletter Signup
@@ -71,7 +71,7 @@
           </div>
         </div>
       </div>
-      <div class="xs-text-left xs-p2 xs-border-right xs-border-top sm-border-top-none" :class="signupAboutSize">
+      <div class="xs-text-left xs-p2" :class="signupAboutSize">
         <div class="item">
           <div v-show="connectData" class="footer__heading xs-mb2">
             Connect
@@ -85,7 +85,7 @@
           </ul>
         </div>
       </div>
-      <div class="xs-text-left xs-p2 xs-border-right xs-border-top sm-border-top-none" :class="signupAboutSize">
+      <div class="xs-text-left xs-p2" :class="signupAboutSize">
         <div class="item">
           <div class="footer__heading xs-mb2">
             Deploy
@@ -102,7 +102,7 @@
           </a>
         </div>
       </div>
-      <div class="c-12 xs-text-left xs-p2 xs-border-top xs-border-right">
+      <div class="c-12 xs-text-left xs-p2">
         <div class="item xs-text-2">
           An open source design by
           <a href="https://jake101.com">

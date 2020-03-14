@@ -55,7 +55,7 @@ export default {
   modules: ["@nuxtjs/markdownit", "@nuxtjs/pwa", "@nuxtjs/axios", 'nuxt-webfontloader'],
   webfontloader: {
     google: {
-      families: ['Archivo+Black:400'] //Loads Lato font with weights 400 and 700
+      families: ['Inter:900'] //Loads Lato font with weights 400 and 700
     }
   },
   markdownit: {

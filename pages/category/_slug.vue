@@ -5,6 +5,14 @@
 <script>
 import BaelGrid from "~/components/BaelGrid"
 export default {
+  components: { BaelGrid },
+  computed: {
+    postByCat() {
+      return this.$store.state.blogPosts.filter(obj => {
+        return obj.category == this.title
+      })
+    }
+  },
   async asyncData({ params, store }) {
     let post = await import(`~/content/categories/posts/${params.slug}.json`)
     await store.commit("SET_TITLE", post.title)
@@ -16,17 +24,9 @@ export default {
       title: `${this.title} | ${this.$store.state.siteInfo.sitename}`
     }
   },
-  components: { BaelGrid },
   transition(to, from) {
     if (!from) return "slide-right"
     return +to.query.page > +from.query.page ? "slide-right" : "slide-left"
-  },
-  computed: {
-    postByCat() {
-      return this.$store.state.blogPosts.filter(obj => {
-        return obj.category == this.title
-      })
-    }
   },
   methods: {
     theSlug() {
@@ -37,12 +37,6 @@ export default {
 </script>
 
 <style>
-.browse a {
-  width: 100%;
-  text-transform: lowercase;
-  font-variant: all-small-caps;
-  font-size: 1.3rem;
-}
 .search:focus {
   outline: none;
 }

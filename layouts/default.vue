@@ -94,8 +94,8 @@ main {
   line-height: 1;
 
   .wf-active & {
-    font-family: "Archivo Black";
-    font-weight: 400;
+    font-family: "Inter";
+    font-weight: 900;
   }
 }
 .feat-wrapper {

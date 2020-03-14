@@ -8,16 +8,16 @@ import { mapGetters, mapActions } from "vuex"
 
 export default {
   watchQuery: ["page"],
+  components: { BaelGrid },
+  data() {
+    return {}
+  },
   async asyncData({ store }) {
     await store.commit("SET_TITLE", "Categories")
   },
   transition(to, from) {
     if (!from) return "fade"
     return +to.query.page > +from.query.page ? "slide-right" : "slide-left"
-  },
-  components: { BaelGrid },
-  data() {
-    return {}
   },
   head() {
     return {

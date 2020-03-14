@@ -1,7 +1,7 @@
 const client = require("@sendgrid/client")
 
 function addSendgridRecipient(client, email) {
-  return new Promise((fulfill, reject) => {
+  return new Promise((resolve, reject) => {
     const data = [
       {
         email: email
@@ -18,7 +18,7 @@ function addSendgridRecipient(client, email) {
       .then(([response, body]) => {
         console.log(response.statusCode)
         console.log(body)
-        fulfill(response)
+        resolve(response)
         // cb(null, response);
       })
       .catch(error => reject(error))
@@ -26,7 +26,7 @@ function addSendgridRecipient(client, email) {
 }
 
 function sendWelcomeEmail(client, email, senderEmail, senderName, templateID) {
-  return new Promise((fulfill, reject) => {
+  return new Promise((resolve, reject) => {
     const data = {
       from: {
         email: senderEmail,
@@ -58,7 +58,7 @@ function sendWelcomeEmail(client, email, senderEmail, senderName, templateID) {
       .then(([response, body]) => {
         console.log(response.statusCode)
         console.log(body)
-        fulfill(response)
+        resolve(response)
       })
       .catch(error => reject(error))
   })
