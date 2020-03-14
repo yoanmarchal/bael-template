@@ -37,16 +37,6 @@ export default {
 </script>
 
 <style>
-.browse a {
-  width: 100%;
-  text-transform: lowercase;
-  font-variant: all-small-caps;
-  font-size: 3rem;
-  mix-blend-mode: color-dodge;
-  color: #000;
-  font-weight: 700;
-  text-shadow: 2px 2px 0px #c5bebe;
-}
 .search:focus {
   outline: none;
 }

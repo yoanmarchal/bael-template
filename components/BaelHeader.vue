@@ -1,14 +1,14 @@
 <template>
-  <nav id="navbar" ref="navBar" class="sm-border-bottom">
+  <nav id="navbar" ref="navBar" class="">
     <div class="r">
-      <div class="c-4 xs-border-bottom xs-border-right lg-border-none xs-text-left xs-p2 sm-border-right">
+      <div class="c-4 xs-text-left xs-p2">
         <div class="item">
           <nuxt-link class="sitename" to="/" exact>
             {{ headerSiteName }}
           </nuxt-link>
         </div>
       </div>
-      <div class="c-4 xs-border-bottom xs-border-right lg-border-none sm-border-right xs-flex xs-flex-justify-start xs-flex-align-center">
+      <div class="c-4 xs-flex xs-flex-justify-start xs-flex-align-center">
         <div class="item xs-flex">
           <VueFuse
             placeholder="Search"
@@ -19,13 +19,13 @@
           />
         </div>
       </div>
-      <div class="c-4 xs-border-bottom lg-border-none sm-border-right xs-hide sm-block">
+      <div class="c-4 xs-hide sm-block">
         
       </div>
       <div
         v-if="blogtitle"
         style="z-index:55;"
-        class="c-12 xs-border-bottom xs-border-right sm-border-none lg-border-none xs-p2 xs-text-2 titlebar"
+        class="c-12 xs-p2 xs-text-2 titlebar"
       >
         <div class="item">
           <nuxt-link to="/" exact>
@@ -133,8 +133,8 @@ nav {
   font-size: 2rem;
 
   .wf-active & {
-    font-family: "Archivo Black";
-    font-weight: 400;
+    font-family: "Inter";
+    font-weight: 900;
   }
 }
 @media only screen and (max-width: 40rem) {

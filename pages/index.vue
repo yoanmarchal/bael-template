@@ -27,6 +27,12 @@ export default {
 <style>
 .browse a {
   width: 100%;
+  text-transform: lowercase;
+  font-variant: all-small-caps;
+  font-size: 3rem;
+  color: #fff;
+  font-weight: 700;
+  text-shadow: 2px 2px 0px #5a5d46, 0px 0px 1px #000;
 }
 .search:focus {
   outline: none;

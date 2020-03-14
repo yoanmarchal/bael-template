@@ -1,6 +1,6 @@
 <template>
   <div
-    class="full-height single xs-border-left xs-border-right xs"
+    class="full-height single xs"
     :style="
       `min-height:calc(100vh - ${navbarheight}px);margin-top:${navbarheight}px`
     "
