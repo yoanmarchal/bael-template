@@ -1,15 +1,10 @@
 {
-  "sitename": "Test",
-  "sitedescription": "A fashionable brutalist blog template using Netlify CMS and Nuxt.js.",
+  "sitename": "Netlify blog starter",
+  "sitedescription": "Light blog template using Netlify CMS and Nuxt.js.",
   "siteicon": "/images/uploads/icon.png",
-  "showmenu": true,
+  "showmenu": false,
   "emailsignup": true,
   "menu": [
-    {
-      "name": "jake101",
-      "position": "1",
-      "link": "https://www.jake101.com/"
-    },
     {
       "name": "Nuxt.js",
       "position": "2",
