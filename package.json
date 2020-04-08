@@ -45,9 +45,9 @@
     "postcss-hexrgba": "^2.0.0",
     "postcss-nested": "^4.2.1",
     "postcss-responsive-type": "^1.0.0",
-    "prettier": "2.0.2"
+    "prettier": "2.0.4"
   },
   "engines": {
-    "node": "10.19.0"
+    "node": "10.20.0"
   }
 }
