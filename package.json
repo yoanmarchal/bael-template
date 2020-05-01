@@ -17,10 +17,10 @@
     "post-update": "yarn upgrade --latest"
   },
   "dependencies": {
-    "@nuxtjs/axios": "5.10.1",
+    "@nuxtjs/axios": "5.10.3",
     "@nuxtjs/markdownit": "1.2.9",
     "@nuxtjs/pwa": "3.0.0-beta.20",
-    "@sendgrid/client": "7.0.1",
+    "@sendgrid/client": "7.1.0",
     "bf-solid": "2.11.2",
     "fuse.js": "5.2.3",
     "globby": "^11.0.0",
@@ -30,7 +30,7 @@
     "nuxt": "2.12.2",
     "nuxt-webfontloader": "^1.1.0",
     "sass-loader": "8.0.2",
-    "tar": "^6.0.1",
+    "tar": "^6.0.2",
     "vue-moment": "4.1.0"
   },
   "devDependencies": {
