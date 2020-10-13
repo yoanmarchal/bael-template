@@ -19,7 +19,7 @@
   "dependencies": {
     "@nuxtjs/axios": "5.12.2",
     "@nuxtjs/markdownit": "1.2.10",
-    "@nuxtjs/pwa": "3.1.2",
+    "@nuxtjs/pwa": "3.2.2",
     "@sendgrid/client": "7.2.6",
     "bf-solid": "2.11.2",
     "fuse.js": "6.4.1",
