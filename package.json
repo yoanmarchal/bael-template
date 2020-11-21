@@ -35,7 +35,7 @@
   },
   "devDependencies": {
     "babel-eslint": "10.1.0",
-    "eslint": "7.13.0",
+    "eslint": "7.14.0",
     "eslint-config-prettier": "6.15.0",
     "eslint-friendly-formatter": "4.0.1",
     "eslint-loader": "4.0.2",
@@ -45,7 +45,7 @@
     "postcss-hexrgba": "^2.0.1",
     "postcss-nested": "^4.2.3",
     "postcss-responsive-type": "^1.0.0",
-    "prettier": "2.1.2"
+    "prettier": "2.2.0"
   },
   "engines": {
     "node": "10.23.0"
