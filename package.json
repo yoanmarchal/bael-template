@@ -19,7 +19,7 @@
   "dependencies": {
     "@nuxtjs/axios": "5.12.5",
     "@nuxtjs/markdownit": "1.2.10",
-    "@nuxtjs/pwa": "3.3.3",
+    "@nuxtjs/pwa": "3.3.4",
     "@sendgrid/client": "7.4.1",
     "bf-solid": "2.11.2",
     "fuse.js": "6.4.6",
@@ -29,8 +29,8 @@
     "node-sass": "^5.0.0",
     "nuxt": "2.14.12",
     "nuxt-webfontloader": "^1.1.0",
-    "sass-loader": "10.1.0",
-    "tar": "^6.0.5",
+    "sass-loader": "10.1.1",
+    "tar": "^6.1.0",
     "vue-moment": "4.1.0"
   },
   "devDependencies": {
